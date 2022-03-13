@@ -26,6 +26,12 @@ const MainPage = () => {
       setItemsToShow(fetchedData.slice(0, itemsToShowNumber));
   }, [itemsToShowNumber, fetchedData]);
 
+  if(error) return <div className="error">
+    <h1 className="error-message">
+      Something went wrong...
+    </h1>
+  </div>
+
   return (
     <div>
       <div className="container">
