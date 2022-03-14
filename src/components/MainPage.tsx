@@ -2,10 +2,10 @@ import React, { useState, useEffect } from "react";
 import Card from "./Card";
 
 const MainPage = () => {
-  const [fetchedData, setFetchedData] = useState<any>([]);
+  const [fetchedData, setFetchedData] = useState<{id: number, download_url: string, author: string}[]>([]);
   const [error, setError] = useState("");
   const [itemsToShowNumber, setItemsToShowNumber] = useState(3);
-  const [itemsToShow, setItemsToShow] = useState([]);
+  const [itemsToShow, setItemsToShow] = useState<{id: number, download_url: string, author: string}[]>([]);
 
   const INCREASE_ITEMSTOSHOW_ONCLICK = 3;
 
